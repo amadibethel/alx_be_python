@@ -26,3 +26,5 @@ else:
 
 # Print the customized reminder
 print("\nReminder:", reminder)
+
+/tmp/correction/3366251949962103751827535839967437967202_5/100740/969299/control-flow/daily_reminder.py doesn't contain print\s*\(\s*f?['\"]Reminder:\s*
