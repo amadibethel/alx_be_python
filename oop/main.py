@@ -1,6 +1,7 @@
 from book_class import Book
 from library_system import Book as BaseBook, EBook, PrintBook, Library
 from polymorphism_demo import Shape, Rectangle, Circle
+from class_static_methods_demo import Calculator
 import math
 
 
@@ -53,9 +54,25 @@ def test_polymorphism():
 
     for shape in shapes:
         print(f"The area of the {shape.__class__.__name__} is: {shape.area()}")
+    print()  # For spacing
+
+
+def test_class_and_static_methods():
+    """Test for Task 3 - Class Methods vs Static Methods"""
+    print("=== Task 3: Class Methods vs Static Methods ===")
+
+    # Using the static method
+    sum_result = Calculator.add(10, 5)
+    print(f"The sum is: {sum_result}")
+
+    # Using the class method
+    product_result = Calculator.multiply(10, 5)
+    print(f"The product is: {product_result}")
+    print()  # For spacing
 
 
 if __name__ == "__main__":
     test_magic_methods()
     test_inheritance_and_composition()
     test_polymorphism()
+    test_class_and_static_methods()
