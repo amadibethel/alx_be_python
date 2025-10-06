@@ -1,5 +1,7 @@
 from book_class import Book
 from library_system import Book as BaseBook, EBook, PrintBook, Library
+from polymorphism_demo import Shape, Rectangle, Circle
+import math
 
 
 def test_magic_methods():
@@ -37,8 +39,23 @@ def test_inheritance_and_composition():
 
     # List all books in the library
     my_library.list_books()
+    print()  # For spacing
+
+
+def test_polymorphism():
+    """Test for Task 2 - Polymorphism and Method Overriding"""
+    print("=== Task 2: Polymorphism and Method Overriding ===")
+
+    shapes = [
+        Rectangle(10, 5),
+        Circle(7)
+    ]
+
+    for shape in shapes:
+        print(f"The area of the {shape.__class__.__name__} is: {shape.area()}")
 
 
 if __name__ == "__main__":
     test_magic_methods()
     test_inheritance_and_composition()
+    test_polymorphism()
